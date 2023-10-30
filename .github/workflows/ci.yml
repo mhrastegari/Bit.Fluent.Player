@@ -31,7 +31,7 @@ jobs:
         node-version: 18
 
     - name: Build
-      run: dotnet build src/Client/Web/Bit.Fluent.Player.Client.Web.csproj -p:Configuration=Release -p:WebAppDeploymentType="${{ env.WEB_APP_DEPLOYMENT_TYPE }}"
+      run: dotnet build src/Client/Web/Bit.Fluent.Player.Client.Web.csproj -p:BlazorMode=BlazorServer -p:Configuration=Release -p:WebAppDeploymentType="${{ env.WEB_APP_DEPLOYMENT_TYPE }}"
 
   build_blazor_hybrid_android:
     name: build blazor hybrid (android)
