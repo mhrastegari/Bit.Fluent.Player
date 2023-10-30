@@ -4,10 +4,10 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".SolutionItems", ".SolutionItems", "{5CF43F76-BB71-4B5B-B4DF-1C753E042A8F}"
 	ProjectSection(SolutionItems) = preProject
-		Bit.Fluent.Player\.gitignore = Bit.Fluent.Player\.gitignore
-		Bit.Fluent.Player\Clean.bat = Bit.Fluent.Player\Clean.bat
-		Bit.Fluent.Player\src\Directory.Build.props = Bit.Fluent.Player\src\Directory.Build.props
-		Bit.Fluent.Player\global.json = Bit.Fluent.Player\global.json
+		.gitignore = .gitignore
+		Clean.bat = Clean.bat
+		src\Directory.Build.props = src\Directory.Build.props
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{99987B56-D7E8-43AA-9EFC-07EC384B4382}"
@@ -18,24 +18,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{4CB2E4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{4FFA9633-C4EC-4DD8-8C26-DE597E731E09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Shared", "Bit.Fluent.Player\src\Shared\Bit.Fluent.Player.Shared.csproj", "{E654B009-D083-4476-AEA5-EF5D73BF2EA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Shared", "src\Shared\Bit.Fluent.Player.Shared.csproj", "{E654B009-D083-4476-AEA5-EF5D73BF2EA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Iac", "Bit.Fluent.Player\src\Infra\Iac\Bit.Fluent.Player.Iac.csproj", "{50296618-0E17-4596-9BFF-B5C47EB40E74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Iac", "src\Infra\Iac\Bit.Fluent.Player.Iac.csproj", "{50296618-0E17-4596-9BFF-B5C47EB40E74}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Server.Api", "Bit.Fluent.Player\src\Server\Api\Bit.Fluent.Player.Server.Api.csproj", "{29532CE7-708E-4ED0-981E-EF17C573B6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Server.Api", "src\Server\Api\Bit.Fluent.Player.Server.Api.csproj", "{29532CE7-708E-4ED0-981E-EF17C573B6CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.Core", "Bit.Fluent.Player\src\Client\Core\Bit.Fluent.Player.Client.Core.csproj", "{0AAA866C-CEA9-4D11-B66A-AA2E295DA30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.Core", "src\Client\Core\Bit.Fluent.Player.Client.Core.csproj", "{0AAA866C-CEA9-4D11-B66A-AA2E295DA30B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.Web", "Bit.Fluent.Player\src\Client\Web\Bit.Fluent.Player.Client.Web.csproj", "{37B0BFFF-762E-42C6-A999-80EF9F38BE4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.Web", "src\Client\Web\Bit.Fluent.Player.Client.Web.csproj", "{37B0BFFF-762E-42C6-A999-80EF9F38BE4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.App", "Bit.Fluent.Player\src\Client\App\Bit.Fluent.Player.Client.App.csproj", "{5DD4EE2C-8397-4E32-B147-6FF87D7DD648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bit.Fluent.Player.Client.App", "src\Client\App\Bit.Fluent.Player.Client.App.csproj", "{5DD4EE2C-8397-4E32-B147-6FF87D7DD648}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{405C750E-F6ED-4CEB-92F2-010066DC4364}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{09A4E0FB-544F-4BA1-8C68-FD5DB514B819}"
 	ProjectSection(SolutionItems) = preProject
-		Bit.Fluent.Player\.github\workflows\cd.yml = Bit.Fluent.Player\.github\workflows\cd.yml
-		Bit.Fluent.Player\.github\workflows\ci.yml = Bit.Fluent.Player\.github\workflows\ci.yml
+		.github\workflows\cd.yml = .github\workflows\cd.yml
+		.github\workflows\ci.yml = .github\workflows\ci.yml
 	EndProjectSection
 EndProject
 Global
