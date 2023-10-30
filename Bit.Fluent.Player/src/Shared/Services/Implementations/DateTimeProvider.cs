@@ -1,0 +1,9 @@
+﻿namespace Bit.Fluent.Player.Shared.Services.Implementations;
+
+public class DateTimeProvider : IDateTimeProvider
+{
+    public DateTimeOffset GetCurrentDateTime()
+    {
+        return DateTimeOffset.UtcNow;
+    }
+}

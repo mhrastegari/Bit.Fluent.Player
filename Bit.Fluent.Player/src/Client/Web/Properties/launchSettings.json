@@ -1,0 +1,19 @@
+{
+    "profiles": {
+        "Bit.Fluent.Player.Client.Web": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": true,
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "applicationUrl": "https://localhost:4041;http://localhost:4040"
+        },
+        "Bit.Fluent.Player.Client.Web.Electron": {
+            "commandName": "Executable",
+            "executablePath": "dotnet",
+            "commandLineArgs": "electronize start",
+            "workingDirectory": "."
+        }
+    }
+}

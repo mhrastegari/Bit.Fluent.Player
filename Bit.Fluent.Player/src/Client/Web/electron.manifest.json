@@ -1,0 +1,35 @@
+{
+  "executable": "Bit.Fluent.Player.Client.Web",
+  "splashscreen": {
+    "imageFile": ""
+  },
+  "name": "Bit.Fluent.Player",
+  "author": "",
+  "singleInstance": true,
+  "environment": "Production",
+  "build": {
+    "appId": "com.Bit.Fluent.Player.Client.Web.app",
+    "productName": "Bit.Fluent.Player.Client.Web",
+    "copyright": "Copyright © 2023",
+    "buildVersion": "1.0.0",
+    "compression": "maximum",
+    "directories": {
+      "output": "../../../bin/Desktop"
+    },
+    "extraResources": [
+      {
+        "from": "./bin",
+        "to": "bin",
+        "filter": [ "**/*" ]
+      }
+    ],
+    "files": [
+      {
+        "from": "./ElectronHostHook/node_modules",
+        "to": "ElectronHostHook/node_modules",
+        "filter": [ "**/*" ]
+      },
+      "**/*"
+    ]
+  }
+}
