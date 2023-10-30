@@ -2,18 +2,21 @@
 
 <header class="header">
     <div class="header-contact">
-        @if (_isUserAuthenticated)
-        {
-            <BitIconButton Class="header-menu" IconName="@BitIconName.CollapseMenu" OnClick=ToggleMenu />
-        }
-        <a class="logo-lnk" href="/"></a>
-    </div>
-    <div class="header-contact">
-        @if (!_isUserAuthenticated)
-        {
-            <BitActionButton Class="header-item" IconName="@BitIconName.EntityExtraction" Href="/terms" Target="_self">@Localizer[nameof(AppStrings.Terms)]</BitActionButton>
-            <BitActionButton Class="header-item" IconName="@BitIconName.AddFriend" Href="/sign-up" Target="_self">@Localizer[nameof(AppStrings.SignUp)]</BitActionButton>
-            <BitActionButton Class="header-item" IconName="@BitIconName.Signin" Href="/sign-in" Target="_self">@Localizer[nameof(AppStrings.SignIn)]</BitActionButton>
-        }
+        <BitIconButton Class="header-menu" IconName="@BitIconName.GlobalNavButton" OnClick=ToggleMenu />
+        <BitPersona Class="persona"
+                    Size="@BitPersonaSize.Size24"
+                    Presence="BitPersonaPresenceStatus.Online"
+                    ImageUrl="_content/Bit.Fluent.Player.Client.Core/images/bit-logo.svg">
+            <ImageOverlayFragment>
+                <BitLabel Style="font-size: 8px;">@Localizer[nameof(AppStrings.Edit)]</BitLabel>
+            </ImageOverlayFragment>
+        </BitPersona>
+        <BitSearchBox Class="search-box" IsUnderlined="true" Placeholder="What do you want to listen to?"/>
+        <button @onclick="WrapHandled(ToggleTheme)" class="toggle-theme-btn dark-theme" title="Turn on light">
+            <span class="icon-container"><i class="bit-icon bit-icon--Sunny"></i></span>
+        </button>
+        <button @onclick="WrapHandled(ToggleTheme)" class="toggle-theme-btn light-theme" title="Turn off light">
+            <span class="icon-container"><i class="bit-icon bit-icon--ClearNight"></i></span>
+        </button>
     </div>
 </header>

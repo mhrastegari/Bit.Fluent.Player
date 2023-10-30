@@ -1,11 +1,18 @@
 ﻿@import '../Styles/abstracts/_functions.scss';
 @import '../Styles/abstracts/_media-queries.scss';
+@import '../Styles/abstracts/_bit-css-variables.scss';
 
 .main {
+    width: 100%;
     display: flex;
+    overflow: auto;
     align-items: center;
-    justify-content: center;
+    padding: 0 rem2(16px);
     flex-flow: column nowrap;
+    justify-content: flex-start;
+    border-start-start-radius: 5px;
+    background-color: $bit-color-background-secondary;
+    height: calc(100vh - (rem2(48px) + var(--bit-status-bar-height)));
 }
 
 .title {

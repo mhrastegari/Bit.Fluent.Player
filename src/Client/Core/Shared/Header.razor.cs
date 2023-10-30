@@ -1,35 +1,16 @@
 ﻿namespace Bit.Fluent.Player.Client.Core.Shared;
 
-public partial class Header : IDisposable
+public partial class Header
 {
-    private bool _disposed;
-    private bool _isUserAuthenticated;
-
     [Parameter] public EventCallback OnToggleMenu { get; set; }
 
-    protected override async Task OnInitAsync()
+    [AutoInject] private NavigationManager _navManager { get; set; } = default!;
+    [AutoInject] private BitThemeManager _bitThemeManager { get; set; } = default!;
+    [AutoInject] private IBitDeviceCoordinator _bitDeviceCoordinator { get; set; } = default!;
+
+    private async Task ToggleTheme()
     {
-        AuthenticationStateProvider.AuthenticationStateChanged += VerifyUserIsAuthenticatedOrNot;
-
-        _isUserAuthenticated = await PrerenderStateService.GetValue($"{nameof(Header)}-isUserAuthenticated", AuthenticationStateProvider.IsUserAuthenticatedAsync);
-
-        await base.OnInitAsync();
-    }
-
-    async void VerifyUserIsAuthenticatedOrNot(Task<AuthenticationState> task)
-    {
-        try
-        {
-            _isUserAuthenticated = await AuthenticationStateProvider.IsUserAuthenticatedAsync();
-        }
-        catch (Exception ex)
-        {
-            ExceptionHandler.Handle(ex);
-        }
-        finally
-        {
-            StateHasChanged();
-        }
+        await _bitDeviceCoordinator.SetDeviceTheme(await _bitThemeManager.ToggleDarkLightAsync() == "dark");
     }
 
     private async Task ToggleMenu()
@@ -37,18 +18,8 @@ public partial class Header : IDisposable
         await OnToggleMenu.InvokeAsync();
     }
 
-    public void Dispose()
+    private async Task GoToEditProfile()
     {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
-
-    protected virtual void Dispose(bool disposing)
-    {
-        if (_disposed) return;
-
-        AuthenticationStateProvider.AuthenticationStateChanged -= VerifyUserIsAuthenticatedOrNot;
-
-        _disposed = true;
+        _navManager.NavigateTo("edit-profile");
     }
 }

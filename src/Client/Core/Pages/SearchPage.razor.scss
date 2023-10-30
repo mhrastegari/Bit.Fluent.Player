@@ -7,11 +7,6 @@
     padding: 0;
 }
 
-.home-header {
-    height: 100%;
-    background: linear-gradient(0deg, rgba(121, 9, 108, 0) 50%, rgb(255 27 0 / 10%) 100%);
-}
-
 .row {
     display: flex;
     gap: rem2(15px);
@@ -59,28 +54,6 @@
 }
 
 ::deep {
-    .category-btn {
-        min-width: unset;
-        height: rem2(30px);
-        white-space: nowrap;
-        border-radius: rem2(15px);
-        border-color: $bit-color-border-disabled;
-    }
-
-    .play-btn {
-        right: 0;
-        color: black;
-        display: none;
-        position: absolute;
-        margin: 0 rem2(10px);
-        font-size: rem2(20px);
-        min-width: rem2(40px);
-        min-height: rem2(40px);
-        border-radius: rem2(20px);
-        box-shadow: $bit-box-shadow-3;
-        background-color: $bit-color-primary-main;
-    }
-
     .show-all {
         display: flex;
         align-items: center;

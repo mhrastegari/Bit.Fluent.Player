@@ -1,3 +1,8 @@
+@import '../Styles/abstracts/_vars.scss';
+@import '../Styles/abstracts/_functions.scss';
+@import '../Styles/abstracts/_media-queries.scss';
+@import '../Styles/abstracts/_bit-css-variables.scss';
+
 :root {
     --bit-status-bar-height: 0px;
 }
@@ -36,4 +41,21 @@ html, body, #app-container {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.page-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    padding: 0 rem2(16px);
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    border: 1px solid $bit-color-border-disabled;
+    background-color: $bit-color-background-secondary;
+    height: calc(100vh - (rem2(51px) + $footerHeight + var(--bit-status-bar-height)));
+
+    @include gt-md {
+        border-start-start-radius: 5px;
+    }
 }

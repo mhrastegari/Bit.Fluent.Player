@@ -4,13 +4,9 @@
 
 <Header OnToggleMenu=ToggleMenuHandler />
 
-@if (_isUserAuthenticated)
-{
-    <NavMenu @bind-IsMenuOpen=_isMenuOpen />
-}
-
-<div class="main @(_isUserAuthenticated ? "main--authenticated" : null)">
+<div class="main main--authenticated">
     <div class="main-content">
+        <NavMenu @bind-IsMenuOpen=_isMenuOpen />
         <AppErrorBoundary>
             @Body
         </AppErrorBoundary>
@@ -19,3 +15,4 @@
 </div>
 
 <MessageBox />
+<NewPlaylistModal />

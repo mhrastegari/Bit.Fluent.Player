@@ -4,17 +4,104 @@
 <PageTitle>@Localizer[nameof(AppStrings.HomeTitle)]</PageTitle>
 
 <div class="page-container">
-    <section class="page-section hero-section">
-        <h1 class="hero-section-title">@Localizer[nameof(AppStrings.HomeTitle)]</h1>
+    <div class="home-header">
+        <div class="row">
+            <BitTypography NoWrap="true" Variant="BitTypographyVariant.H4">Good evening</BitTypography>
+            <BitButton Class="category-btn" ButtonStyle="BitButtonStyle.Standard">Music</BitButton>
+            <BitButton Class="category-btn" ButtonStyle="BitButtonStyle.Standard">Podcasts & Shows</BitButton>
+        </div>
+        <div class="song-lists">
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/eminem.jpg" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/summer.jpeg" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/feels.jpg" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/dido.webp" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/open.png" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+            <div class="list-preview">
+                <BitImage ImageFit="BitImageFit.Cover" Height="72" Style="min-width: 72px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/months.webp" />
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Song title</BitTypography>
+                <BitIconButton Class="play-btn" IconName="@BitIconName.PlaySolid" />
+            </div>
+        </div>
 
-        <div class="hero-section-desc">@Localizer[nameof(AppStrings.HomeMessage)]</div>
+        <div>
+            <div style="padding-bottom: 0" class="row">
+                <BitTypography Style="width: 100%" Variant="BitTypographyVariant.H6">Jump back in</BitTypography>
+                <BitLink Class="show-all">
+                    Show all <BitIcon IconName="@BitIconName.ChevronRight" />
+                </BitLink>
+            </div>
+            <div class="row">
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/funk.jpg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/miracle.jpg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/eminem.jpg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/one.jpeg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/promises.webp" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/feels.jpg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+                <div class="jbi-item">
+                    <BitImage ImageFit="BitImageFit.Cover" Height="118" Width="118" Style="border-radius: 5px" Src="_content/Bit.Fluent.Player.Client.Core/images/covers/how.jpg" />
+                    <div style="padding: 0 10px">
+                        <BitLabel>Song title</BitLabel>
+                        <BitTypography Style="width: 100%" Variant="BitTypographyVariant.Caption">Song Description</BitTypography>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <BitButton Href="https://github.com/bitfoundation/bitplatform/tree/develop/src/Templates/Bit.Fluent.Player"
-                   Target="_blank"
-                   ButtonStyle="BitButtonStyle.Standard"
-                   Title="@Localizer[nameof(AppStrings.GitHubRepo)]"
-                   AriaLabel="@Localizer[nameof(AppStrings.GitHubRepo)]">
-            @Localizer[nameof(AppStrings.GitHubRepo)]
-        </BitButton>
-    </section>
+    </div>
 </div>

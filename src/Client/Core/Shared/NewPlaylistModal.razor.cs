@@ -1,6 +1,6 @@
 ﻿namespace Bit.Fluent.Player.Client.Core.Shared;
 
-public partial class MessageBox : IDisposable
+public partial class NewPlaylistModal : IDisposable
 {
     private static event Func<string, string, Task> OnShow = default!;
 

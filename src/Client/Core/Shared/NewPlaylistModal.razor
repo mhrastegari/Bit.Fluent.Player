@@ -1,0 +1,17 @@
+﻿@inherits AppComponentBase
+
+<BitModal @bind-IsOpen="@_isOpen">
+    <div class="main">
+        <div class="header">
+            <BitTypography Variant="BitTypographyVariant.H6" Class="title">@_title</BitTypography>
+        </div>
+        <div class="body">
+            <img height="96" src="_content/Bit.Fluent.Player.Client.Core/images/bit-logo.svg" />
+            <BitTextField Style="margin: 25px" DefaultValue="Untitled playlist" />
+        </div>
+        <div class="footer">
+            <BitButton Style="width: 100%" OnClick="OnOkClick">Create</BitButton>
+            <BitButton Style="width: 100%" ButtonStyle="BitButtonStyle.Standard" OnClick="OnCloseClick">Cancel</BitButton>
+        </div>
+    </div>
+</BitModal>

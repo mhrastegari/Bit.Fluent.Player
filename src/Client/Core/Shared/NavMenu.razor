@@ -6,28 +6,14 @@
 }
 
 <section class="main-container @(IsMenuOpen ? null : "main-container--closed")">
-    <div class="top-container">
-        <BitPersona Class="persona"
-                    Text="@_user.FullName"
-                    ImageUrl="@_profileImageUrl"
-                    Size=@BitPersonaSize.Size48
-                    SecondaryText="@_user.UserName"
-                    Presence="BitPersonaPresenceStatus.Online"
-                    OnImageClick=GoToEditProfile>
-            <ImageOverlayFragment>
-                <span>@Localizer[nameof(AppStrings.Edit)]</span>
-            </ImageOverlayFragment>
-        </BitPersona>
-        <br />
-        <BitActionButton IconName="@BitIconName.SignOut" OnClick=DoSignOut>
-            @Localizer[nameof(AppStrings.SignOut)]
-        </BitActionButton>
-    </div>
     <BitNav Items="_navItems"
             AriaLabel="NavMenu"
             DefaultSelectedItem="_navItems[0]"
-            OnItemClick="(BitNavItem item) => CloseMenu()">
-    </BitNav>
+            ClassStyles="@(new() { SelectedItemContainer = new() { Class = "nav-slc-item" },
+                                   ItemContainer = new() { Class = "nav-slc-ict" },
+                                   ItemIcon = new() { Class = "nav-slc-icn" } })"
+            OnItemClick="(BitNavItem item) => CloseMenu()" />
+    <div class="divider"></div>
+    <BitActionButton OnClick="CreateNewPlaylist" Class="nav-atn-btn" Styles="@(new() { Icon = "margin: 0 8px" })" IconName="@BitIconName.Add">Create playlist</BitActionButton>
+    <BitActionButton Class="nav-atn-btn" Styles="@(new() { Icon = "margin: 0 8px" })" IsEnabled="false" IconName="@BitIconName.Heart">Liked songs</BitActionButton>
 </section>
-
-<SignOutConfirmModal @bind-IsOpen=_isSignOutModalOpen></SignOutConfirmModal>

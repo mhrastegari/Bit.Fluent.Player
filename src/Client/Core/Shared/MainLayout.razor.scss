@@ -9,19 +9,18 @@
     min-height: 100vh;
     flex-flow: column;
     position: relative;
-    background-color: $bit-color-background-secondary;
-    padding-top: calc(rem2(48px) + var(--bit-status-bar-height));
+    padding-bottom: rem2($footerHeight);
+    padding-top: calc(rem2(50px) + var(--bit-status-bar-height));
 
     .bit-ios & {
-        padding-top: calc(rem2(48px) + env(safe-area-inset-top));
+        padding-top: calc(rem2(50px) + env(safe-area-inset-top));
+        padding-bottom: calc(rem2($footerHeight) + env(safe-area-inset-bottom));
     }
 }
 
 .main--authenticated {
     display: flex;
     flex-flow: column;
-    margin-left: rem2($navMenuWidth);
-    width: calc(100% - rem2($navMenuWidth));
 
     @include lt-lg {
         width: 100%;
@@ -32,8 +31,6 @@
 .main-content {
     flex-grow: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 ::deep {

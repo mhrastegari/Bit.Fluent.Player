@@ -1,0 +1,39 @@
+﻿@import '../Styles/abstracts/_functions.scss';
+@import '../Styles/abstracts/_media-queries.scss';
+@import '../Styles/abstracts/_bit-css-variables.scss';
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    width: rem2(320px);
+    flex-direction: column;
+    border-radius: rem2(5px);
+}
+
+.header {
+    display: flex;
+    padding: rem2(25px);
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.body {
+    flex-grow: 1;
+    display: flex;
+    overflow: auto;
+    max-width: 90vw;
+    white-space: pre;
+    flex-flow: column;
+    align-content: center;
+}
+
+.footer {
+    display: flex;
+    gap: rem2(10px);
+    align-items:center;
+    padding: rem2(20px);
+    justify-content: center;
+    background-color: $bit-color-background-secondary;
+}

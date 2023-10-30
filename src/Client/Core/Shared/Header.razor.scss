@@ -1,4 +1,5 @@
-﻿@import '../Styles/abstracts/_functions.scss';
+﻿@import '../Styles/abstracts/_vars.scss';
+@import '../Styles/abstracts/_functions.scss';
 @import '../Styles/abstracts/_media-queries.scss';
 @import '../Styles/abstracts/_bit-css-variables.scss';
 
@@ -11,59 +12,118 @@
     align-items: center;
     flex-flow: row nowrap;
     min-height: rem2(48px);
-    padding-left: rem2(16px);
+    padding-left: rem2(4px);
     padding-right: rem2(16px);
-    padding-bottom: rem2(7px);
+    padding-bottom: rem2(11px);
     justify-content: space-between;
-    box-shadow: $bit-box-shadow-callout;
     background-color: $bit-color-background-primary;
     padding-top: calc(rem2(7px) + var(--bit-status-bar-height));
-}
 
-.bit-ios {
-    .header {
+    .bit-windows & {
+        padding-right: rem2(128px);
+    }
+
+    .bit-ios & {
         padding-top: calc(rem2(7px) + env(safe-area-inset-top));
     }
-}
-
-.logo-lnk {
-    cursor: pointer;
-    width: rem2(24px);
-    height: rem2(24px);
-    min-width: rem2(24px);
-    border-radius: rem2(4px);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url('images/bit-logo.svg');
 }
 
 .header-contact {
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
+    min-height: rem2(32px);
     justify-content: flex-start;
 }
 
 ::deep {
-    .header-menu {
-        display: none;
-        margin-right: rem2(12px);
+    .logo-lnk {
+        cursor: pointer;
+        width: rem2(16px);
+        height: rem2(16px);
+        border-radius: 50%;
+        min-width: rem2(16px);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('images/bit-logo.svg');
+    }
 
-        @include lt-lg {
-            display: block;
+    .persona {
+        margin-left: rem2(8px);
+    }
+
+    .header-menu {
+        display: block;
+        max-width: rem2(32px);
+        max-height: rem2(32px);
+        border-radius: rem2(5px);
+
+        @include gt-lg {
+            display: none;
+        }
+
+        &:active {
+            span {
+                width: rem2(14px);
+                overflow: hidden;
+                padding-left: rem2(10px);
+            }
         }
     }
 
     .header-item {
         padding: rem2(4px) rem2(16px);
+    }
 
-        @include lt-lg {
-            padding: rem2(4px) rem2(8px);
-        }
+    .search-box {
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: rem2(768px);
+        position: absolute;
+        width: calc(100% - rem2(172px));
 
-        @include lt-md {
-            padding: rem2(4px) rem2(4px);
+        @include gt-md {
+            width: calc(100% - rem2(512px));
         }
     }
+}
+
+.toggle-theme-btn {
+    right: rem2(16px);
+    position: absolute;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    height: rem2(35px);
+    min-width: rem2(35px);
+    border-radius: 50%;
+    background-color: transparent;
+
+    .icon-container {
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+
+        .bit-icon {
+            margin: 0 rem2(4px);
+        }
+    }
+
+    &.dark-theme {
+        .icon-container {
+            padding: 2px 0px 0 1px;
+        }
+    }
+}
+
+.theme-dark .light-theme {
+    display: none;
+}
+
+.theme-light .dark-theme {
+    display: none;
 }
